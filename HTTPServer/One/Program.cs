@@ -70,6 +70,23 @@ class Program
                         </body>
                     </html>";
             }
+            else
+            {
+                statusCode = 501;
+                resText = @"
+                    <html>
+                        <head>
+                            <meta charset='utf-8'>
+                            <style>
+                                body { background-color: #323140; color: #dbcfff; }
+                                h1 { text-align: center; margin-top: 1.4em; }
+                            </style>
+                        </head>
+                        <body>
+                            <h1>501 Not implemented</h1>
+                        </body>
+                    </html>";
+            }
             
             response.StatusCode = statusCode;
             byte[] buffer = Encoding.UTF8.GetBytes(resText);
