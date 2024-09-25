@@ -9,7 +9,7 @@ class Program
         HttpListener listener = new HttpListener();
         listener.Prefixes.Add("http://localhost:5000/");
         listener.Start();
-        Console.WriteLine("Server started. Waiting for requests...");
+        Console.WriteLine("Waiting for a request...");
         while (true)
         {
             HttpListenerContext context = await listener.GetContextAsync();
